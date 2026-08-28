@@ -28,7 +28,7 @@ cp .env.example .env
 VITE_API_BASE_URL=http://localhost:3000
 ```
 
-연결 방법 전체: [`../docs/CONNECTION.md`](../docs/CONNECTION.md) (워크스페이스 루트 기준)
+연결 방법: [`CONNECTION.md`](./CONNECTION.md)
 
 ## 포함 기능
 
