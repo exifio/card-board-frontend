@@ -1,0 +1,19 @@
+.board-status {
+  margin: 0;
+  padding: 32px 16px;
+  text-align: center;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.board-status--empty p {
+  margin: 0;
+}
+
+.board-status--empty p + p {
+  margin-top: 8px;
+}
+
+.board-status--error {
+  color: #dc2626;
+}

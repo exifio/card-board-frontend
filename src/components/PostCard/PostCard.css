@@ -1,0 +1,74 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.post-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2328;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-card__content {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b7280;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 67px;
+}
+
+.post-card__date {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.post-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.post-card__button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.post-card__button--secondary {
+  background: #ffffff;
+  color: #1f2328;
+  border-color: #e5e7eb;
+}
+
+.post-card__button--secondary:hover {
+  background: #f7f7f8;
+}
+
+.post-card__button--danger {
+  background: #ffffff;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.post-card__button--danger:hover {
+  background: #fef2f2;
+}

@@ -4,18 +4,38 @@
 
 ## 기술 스택
 
-- React
-- Vite
-- TypeScript
+- React + Vite + TypeScript
 
-## 로컬 실행
+## 로컬 실행 (독립 모드)
+
+환경변수 없이 실행하면 **로컬 모드**로 동작합니다.  
+데이터는 브라우저 `localStorage`에 저장됩니다.
 
 ```bash
 npm install
 npm run dev
 ```
 
-브라우저에서 `http://localhost:5173` 으로 접속합니다.
+## API 연결 모드
+
+백엔드와 연결하려면 `.env` 파일을 만듭니다.
+
+```bash
+cp .env.example .env
+```
+
+```text
+VITE_API_BASE_URL=http://localhost:3000
+```
+
+연결 방법 전체: [`../docs/CONNECTION.md`](../docs/CONNECTION.md) (워크스페이스 루트 기준)
+
+## 포함 기능
+
+- 게시글 카드 목록 (반응형)
+- 작성 / 수정 / 삭제 폼
+- Loading / Empty / Error 상태
+- API 서비스 레이어 (`src/services/`)
 
 ## 데이터 흐름
 
@@ -23,4 +43,4 @@ npm run dev
 React → REST API → Supabase
 ```
 
-React에서 Supabase를 직접 호출하지 않고 REST API를 통해 데이터를 주고받습니다.
+Supabase Secret key는 프론트에 넣지 않습니다.
