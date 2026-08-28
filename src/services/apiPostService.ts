@@ -11,7 +11,11 @@ async function parseJson<T>(response: Response): Promise<T> {
     return {} as T
   }
 
-  return JSON.parse(text) as T
+  try {
+    return JSON.parse(text) as T
+  } catch {
+    return {} as T
+  }
 }
 
 async function request<T>(baseUrl: string, path: string, init?: RequestInit): Promise<T> {
