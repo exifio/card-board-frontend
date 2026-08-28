@@ -29,7 +29,7 @@ async function request<T>(baseUrl: string, path: string, init?: RequestInit): Pr
 
   if (!response.ok) {
     const body = await parseJson<ApiErrorBody>(response)
-    throw new Error(body.message ?? '요청에 실패했습니다.')
+    throw new Error(body?.message ?? `요청에 실패했습니다 (HTTP ${response.status})`)
   }
 
   if (response.status === 204) {
